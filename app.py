@@ -43,8 +43,8 @@ def fetch_linkedin_jobs(query):
 
 # --- LangChain Agent ---
 model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto")
-tokenizer = AutoTokenizer.from_pretrained(model_id)
+model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto",use_auth_token=True)
+tokenizer = AutoTokenizer.from_pretrained(model_id,use_auth_token=True)
 pipe = pipeline(
     "text-generation",
     model=model,
