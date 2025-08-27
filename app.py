@@ -14,7 +14,7 @@ load_dotenv()
 RAPIDAPI_KEY = 'b80d2713ffmsh8aa096119256b3cp16f8fajsnfca762cb9ec1'
 
 #Login to HuggingFace
-hf_token = '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'
+hf_token = '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'
 
 # API URLs
 ACTIVE_JOBS_URL = "https://active-jobs-db.p.rapidapi.com/api/job/getJobs"
