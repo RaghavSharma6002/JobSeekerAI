@@ -14,7 +14,7 @@ load_dotenv()
 RAPIDAPI_KEY = 'b80d2713ffmsh8aa096119256b3cp16f8fajsnfca762cb9ec1'
 
 #Login to HuggingFace
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
+hf_token = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 
 # API URLs
 ACTIVE_JOBS_URL = "https://active-jobs-db.p.rapidapi.com/api/job/getJobs"
@@ -43,8 +43,8 @@ def fetch_linkedin_jobs(query):
 
 # --- LangChain Agent ---
 model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto",use_auth_token=True)
-tokenizer = AutoTokenizer.from_pretrained(model_id,use_auth_token=True)
+model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto",use_auth_token=hf_token )
+tokenizer = AutoTokenizer.from_pretrained(model_id,use_auth_token=hf_token )
 pipe = pipeline(
     "text-generation",
     model=model,
