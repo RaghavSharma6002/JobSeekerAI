@@ -42,7 +42,7 @@ def fetch_linkedin_jobs(query):
     return [{"error": f"LinkedIn API Error {response.status_code}"}]
 
 # --- LangChain Agent ---
-model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+model_id = "meta-llama/Llama-3.1-8B-Instruct"
 model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto",use_auth_token=hf_token )
 tokenizer = AutoTokenizer.from_pretrained(model_id,use_auth_token=hf_token )
 pipe = pipeline(
