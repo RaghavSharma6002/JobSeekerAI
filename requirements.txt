@@ -1,0 +1,19 @@
+# Web framework
+streamlit==1.49.0
+
+# LLM support
+langchain==0.3.27
+langchain-community
+transformers
+accelerate
+torch
+huggingface-hub
+sentencepiece
+
+
+# API requests
+requests==2.32.5
+python-dotenv==1.1.1
+
+
+
