@@ -13,23 +13,23 @@ The app is built with LangChain, OpenAI (or LLaMA) for reasoning, and Streamlit 
 
 **Setup**
 1. Clone the repository
-  '''bash
+```bash
 git clone https://github.com/your-username/job-search-agent.git
 cd job-search-agent
-'''
+```
 2. Install dependencies
-  '''bash
+```bash
 pip install -r requirements.txt
-'''
+```
 3. Set up environment variables
-  '''
+```
 RAPIDAPI_KEY=your_rapidapi_key_here
 OPENAI_API_KEY=your_openai_key_here
-'''
-4. Run the app
-'''bash
+```
+5. Run the app
+```bash
 streamlit run app.py
-'''
+```
 
 **Next Steps**
 * Add pydantic classes to ensure correct generation of outputs
